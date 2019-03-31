@@ -4,7 +4,8 @@ function saveForm() {
 
 	var url = "/saveForm?contact=" + contact 
 				+ "&message=" + message 
-				+ "&fbtoken=" + fbtoken;
+				+ "&fbtoken=" + fbtoken 
+				+ "&googletoken=" + googletoken;
 	
 	$.post(url, {}, function(response) {
 		var itemid = response;

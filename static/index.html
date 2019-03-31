@@ -4,6 +4,7 @@
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+	<meta name="google-signin-client_id" content="517870087521-c65a3gl2p2n2u5hdb8scmgm4l1tninlq.apps.googleusercontent.com">
 	<title>:: APP BASICÃO ::</title>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -14,12 +15,14 @@
 
 	<script src="js/facebook.js"></script>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=158550007562379&autoLogAppEvents=1"></script>
+	<script src="js/googlelogin.js"></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-	<style> 
+	<style>
 		@import url("css/main.css");
 	</style>
 	<script src="js/main.js"></script>
-	<script src="js/form.js"></script>  
+	<script src="js/form.js"></script>
 </head>
 
 <body>
@@ -45,14 +48,16 @@
 
 		<section id="loginPage">
 			<center>
-				<br/><br/><br/>  
+				<br/><br/><br/>
 				<img src="logoappbasicao.png" width="200" alt="Logo App Basicao" />
 				<br/><br/><br/>
 				<div id="fb-root"></div>
-				<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+				<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="true" data-use-continue-as="false" scope="public_profile,email" onlogin="checkLoginState();"></div>
+				<br/>
+				<div id="google-signin2"></div>
 			</center>
 		</section>
-		
+
 		<section id="mapPage" style="display:none;">
 			<center>
 				<h1>Mapa</h1></center>
@@ -61,6 +66,19 @@
 		<section id="formPage" style="display:none;">
 			<center>
 				<h1>Cadastro</h1></center>
+			<div style="margin:30px;">
+				<label for="feedbackmessageTextArea"><b>Envie-nos seu feedback, dúvidas ou sugestões:</b></label>
+				<textarea id="feedbackmessageTextArea"></textarea>
+			</div>
+			<div style="margin:30px;">
+				<label for="contactField"><b>Informação de contato:</b></label>
+				<input id="contactField" type="text">
+			</div>
+			<div>
+				<center><button type="button" name="action" onclick="saveForm();">Salvar</button></center>
+			</div>
+			<br/>
+			<div id="listFormDiv" style="margin:20px;"></div>
 		</section>
 
 	</div>
