@@ -4,7 +4,7 @@ from bson.json_util import dumps
 
 dburi = mongodb+srv://dbuser:zigozi21@cluster0-sgoei.mongodb.net/test?retryWrites=true
 dbname = "test"
-dbcollectionname = "test"
+dbcollectionname = "testx"
 	
 def saveCadastro(item):
 	client = pymongo.MongoClient(dburi)
