@@ -2,7 +2,7 @@ import pymongo
 from bson.json_util import dumps
 
 
-dburi = mongodb+srv://dbuser:zigozi21@cluster0-sgoei.mongodb.net/test?retryWrites=true
+dburi = mongodb+srv://dbuser1:zigozi21@cluster0-sgoei.mongodb.net/test?retryWrites=true
 dbname = "test"
 dbcollectionname = "testx"
 	
