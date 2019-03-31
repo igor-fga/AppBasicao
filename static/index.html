@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+	<title>:: APP BASICÃO ::</title>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="js/facebook.js"></script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=158550007562379&autoLogAppEvents=1"></script>
+
+	<style> 
+		@import url("css/main.css");
+	</style>
+	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>  
+</head>
+
+<body>
+	<div class="background">
+		<section id="header">
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#" data-target="mobile-demo" class="sidenav-trigger">
+						<div class="NavbarToggle">
+							<div class="ToggleOne"></div>
+							<div class="ToggleTwo"></div>
+							<div class="ToggleThree"></div>
+						</div>
+					</a>
+				</div>
+			</nav>
+			<ul class="sidenav" id="mobile-demo">
+				<li><a href="javascript:void(0)" onclick="showLoginPage()"><i class="material-icons" >home</i> &nbsp; Início</a></li>
+				<li><a href="javascript:void(0)" onclick="showMapPage()"><i class="material-icons" >map</i> &nbsp; Mapa</a></li>
+				<li><a href="javascript:void(0)" onclick="showFormPage()"><i class="material-icons" >assignment</i> &nbsp; Cadastro</a></li>
+			</ul>
+		</section>
+
+		<section id="loginPage">
+			<center>
+				<br/><br/><br/>  
+				<img src="logoappbasicao.png" width="200" alt="Logo App Basicao" />
+				<br/><br/><br/>
+				<div id="fb-root"></div>
+				<div class="fb-login-button" data-size="large" data-button-type="login_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+			</center>
+		</section>
+		
+		<section id="mapPage" style="display:none;">
+			<center>
+				<h1>Mapa</h1></center>
+		</section>
+
+		<section id="formPage" style="display:none;">
+			<center>
+				<h1>Cadastro</h1></center>
+		</section>
+
+	</div>
+</body>
+</html>
